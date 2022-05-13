@@ -11,8 +11,20 @@
     height: 100vh;
 }
 
-.square {
+.square100 {
     flex-basis: calc(100% / 8);
     height: calc(100% / 8);
+    border: 1px solid black;
+}
+
+.square81 {
+    flex-basis: calc(100% / 9);
+    height: calc(100% / 9);
+    border: 1px solid black;
+}
+
+.square49 {
+    flex-basis: calc(100% / 7);
+    height: calc(100% / 7);
     border: 1px solid black;
 }
