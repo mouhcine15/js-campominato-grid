@@ -28,3 +28,7 @@
     height: calc(100% / 7);
     border: 1px solid black;
 }
+
+.clicked {
+    background-color: aqua;
+}
