@@ -17,13 +17,35 @@ function creazione49 () {
     node.className = "square49";
     return node;
 };
+function randomNumMinMax(rangeMin, rangeMax) {
+    let result = Math.floor(Math.random() * (rangeMax - rangeMin + 1)) + rangeMin;
+
+    return result;
+};
+function createRandomUniqueNumArr (numItems, min, max) {
+    const arrInt = [];
+    while (arrInt.length < numItems) {
+        let NumRandomInt = randomNumMinMax(min, max);
+        if (!arrInt.includes(NumRandomInt)) {
+            arrInt.push(NumRandomInt);
+        };
+    }
+    return arrInt;
+};
 
 
 if (livello == "1") {
     
-    for (let i = 0; i < 100; i++) {
+    const num = createRandomUniqueNumArr(100, 1, 100);
+    console.log(num);
+
+    for (let i = 0; i < num.length; i++) {
     
         const quadrato = creazione100();
+
+        let arr = num[i]; 
+        quadrato.append(arr);
+
         quadrato.addEventListener ("click",
             function () {
                 console.log(this);
@@ -35,10 +57,17 @@ if (livello == "1") {
     }       
 
 } else if (livello == "2") {
+
+    const num = createRandomUniqueNumArr(81, 1, 81);
+    console.log(num);
     
     for (let i = 0; i < 81; i++) {
     
         const quadrato = creazione81();
+
+        let arr = num[i]; 
+        quadrato.append(arr);
+
         quadrato.addEventListener ("click",
             function () {
                 console.log(this);
@@ -50,10 +79,16 @@ if (livello == "1") {
     } 
 } else if (livello == "3") {
     
+    const num = createRandomUniqueNumArr(49, 1, 49);
+    console.log(num);
         
         for (let i = 0; i < 49; i++) {
         
             const quadrato = creazione49();
+
+            let arr = num[i]; 
+            quadrato.append(arr);
+
             quadrato.addEventListener ("click",
                 function () {
                     console.log(this);
